@@ -3,27 +3,27 @@
     <h1>{{title}}</h1>
     <div class="calculator-grid">
           <div class="output">
-            <div class="previous-operand">previousOperand</div>
-            <div class="current-operand">currentOperand</div>
+            <div class="previous-operand " >{{prevOperand}}</div>
+            <div class="current-operand" >{{currentNumber}}</div>
           </div>
-          <button data-id= "ac" class="span-two">AC</button>
-          <button data-id= "del"> DEL</button>
-          <button data-id="÷">÷</button>
-          <button data-id="1">1</button> 
-          <button data-id="2">2</button> 
-          <button data-id="3">3</button> 
-          <button data-id="*">*</button>
-          <button data-id="4" >4</button> 
-          <button data-id="5">5</button> 
-          <button data-id="6">6</button> 
-          <button data-id="+">+</button>
-          <button data-id="7">7</button> 
-          <button data-id="8">8</button> 
-          <button data-id="9">9</button> 
-          <button data-id="-">-</button>
-          <button data-id="." >.</button> 
-          <button data-id="0">0</button> 
-          <button data-id= "=" class="span-two" >=</button>
+          <button type="button" (click) ="clearAll()"  class="span-two" value="all-clear">AC</button>
+          <button type="button" (click) = "Correction()"  value="delete">DEL</button>
+          <button type="button" (click) = "getOperation('/')" class="operator" value="/">&divide;</button>
+          <button type="button" (click) = "getNumber('1')" value="1">1</button> 
+          <button type="button" (click) = "getNumber('2')"value="2">2</button> 
+          <button type="button" (click) = "getNumber('3')"value="3">3</button> 
+          <button type="button" (click) = "getOperation('*')" class="operator" value="*">&times;</button>
+          <button type="button" (click) = "getNumber('4')" value="4">4</button> 
+          <button type="button" (click) = "getNumber('5')" value="5">5</button> 
+          <button type="button" (click) = "getNumber('6')" value="6">6</button> 
+          <button type="button" (click) = "getOperation('+')" class="operator" value="+">+</button>
+          <button type="button" (click) = "getNumber('7')" value="7">7</button> 
+          <button type="button" (click) = "getNumber('8')" value="8">8</button> 
+          <button type="button" (click) = "getNumber('9')" value="9">9</button> 
+          <button type="button" (click) = "getOperation('-')" class="operator" value="-">-</button>
+          <button type="button" (click) = "getDecimal()" class="decimal" value=".">.</button> 
+          <button type="button" (click) = "getNumber('0')" value="0">0</button> 
+          <button type="button" (click) = "getOperation('=')" class="span-two" value="=">=</button>
     </div>
     <p>By: {{author}}</p>
 </div>
